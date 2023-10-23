@@ -17,18 +17,62 @@ class MyApp extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             child: TextField(
               autocorrect: false,
-              autofocus: false,
-              enableSuggestions: true,
-              enableInteractiveSelection: false,
-              // enabled: false,
+             showCursor: true,
+              cursorColor: Colors.green,
+              // cursorWidth: 10,
+              // cursorHeight: 25,
+              // cursorRadius: Radius.circular(20),
+
+              textAlign: TextAlign.start,
+              textAlignVertical: TextAlignVertical.center,
+              textCapitalization: TextCapitalization.none,
+
+              style: TextStyle(
+                  color: Colors.green,
+                      fontSize: 20,
+              ),
               obscureText: true,
-              obscuringCharacter: '=',
-              keyboardType: TextInputType.phone,
-              readOnly: true,
+
+              decoration: InputDecoration(
+                icon: Icon(
+                  Icons.person,
+                  size: 35,
+                ),
+                border: OutlineInputBorder(),
+
+            focusedBorder:OutlineInputBorder(
+              borderSide: BorderSide(
+                  color: Colors.black,
+              ),
+            ),
+            enabledBorder:OutlineInputBorder(
+              borderSide: BorderSide(
+                  color: Colors.deepOrange
+              ),
+            ),
+            prefixIcon: Icon(Icons.add_a_photo),
+            suffixIcon: Icon(Icons.remove_red_eye),
+
+
+            //     prefixIcon: Icon(
+            //     Icons.person_add,
+            //     size: 35,
+            // ),
+            // prefixText: "Name: ",
+                hintText: "Please input your name",
+                hintStyle: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                ),
+                labelText: "full Name",
+                labelStyle: TextStyle(
+                  color: Colors.black,
+                ),
             ),
           ),
         ),
       ),
+    ),
     );
   }
 }
