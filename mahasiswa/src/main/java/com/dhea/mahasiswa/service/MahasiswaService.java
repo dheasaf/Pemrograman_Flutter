@@ -27,6 +27,12 @@ public class MahasiswaService {
     public List<Mahasiswa> getAll(){
         return mahasiswaRepository.findAll();
     }
+     public Mahasiswa getMahasiswaById(Long id){
+        return mahasiswaRepository.findById(id).get();
+    }
+    public Mahasiswa getMahasiswa(Long idmahasiswa){
+        return mahasiswaRepository.findById(idmahasiswa).get();
+    }
     
     public void insert(Mahasiswa mahasiswa){
         Optional<Mahasiswa> mahasiswaOptional =
@@ -36,5 +42,6 @@ public class MahasiswaService {
         }
         mahasiswaRepository.save(mahasiswa);
     }
+    
     
 }
